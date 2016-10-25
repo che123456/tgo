@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>企业认证</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+    <script type="text/javascript" charset="UTF-8">
+      	mui.init();	    	
+    </script>
+    
+</head>
+<body>
+	<div class="mui-content personage" id="enterprise">
+	    <form action="#" method="post" class="bl-form bl-formhor" id="jsForm">	
+			<div class="datum">
+				<div class="item">						
+					<h2>基础信息</h2>
+					<span class="num">1</span>
+					<div class="texts">
+						<div class="controls">
+		                   <input id="name" class="fn-tinput" type="text" name="gsname" placeholder="请输入您的公司名称" required data-msg-required="请输入您的公司名称" minlength="4" data-msg-minlength="至少输入4个字符" />		                   
+		                </div>
+		                <div class="controls">
+		                   <input id="site" class="fn-tinput" type="text" name="site" placeholder="请输入您的公司地址" required data-msg-required="请输入您的公司地址" minlength="4" data-msg-minlength="至少输入4个字符" />		                   
+		                </div>
+		                <div class="controls">
+		                    <input type="text" value="" name="tel" class="fn-tinput" placeholder="请输入您的联系电话" required data-rule-mobile="true" data-msg-required="请输入您的联系电话" data-msg-mobile="请输入正确格式" />
+		                </div>
+					</div>							
+				</div>
+				<div class="item">						
+					<h2>店铺资料</h2>
+					<span  class="num">2</span>
+					<div class="texts">
+						<div class="controls">
+		                   <input  class="fn-tinput" type="text" name="ShopNam" placeholder="请输入您的店铺名称" required data-msg-required="请输入您的店铺名称" minlength="4" data-msg-minlength="至少输入4个字符" />		                   
+		                </div>		              
+					<div class="controls lx" >
+						<p style="line-height: 4rem;">请选择您的经营范围</p>
+	                    <select name="select1" required >
+	                        <option value="生鲜水果">生鲜水果</option>
+	                        <option value="生活服务">生活服务</option>
+	                        <option value="农家小炒">农家小炒</option>	                        
+	                    </select>
+	                    <span class="sanjiao"><img src="images/sanjiao_03.png"/></span>
+	                </div>
+				</div>
+				</div>
+				<div class="item none">						
+					<h2>认证资料</h2>
+					<span  class="num">3</span>
+					<div class="texts">
+						<div class="controls">
+		                   <input  class="fn-tinput" type="text" name="name2" placeholder="请输入您的姓名" required data-msg-required="请输入您的姓名" minlength="2" data-msg-minlength="至少输入2个字符" />		                   
+		                </div>
+		                <div class="controls">
+		                   <input  class="fn-tinput" type="text" name="identity" placeholder="请输入您的身份证号" required data-msg-required="请输入您的身份证号" data-rule-idCard="true"/>		                   
+		                </div>													
+					</div>
+					<div class="license">
+						<div class="mui-row" id="row">
+							
+							<label class="mui-col-xs-3 img_box" id="sc" style="overflow: hidden;" >
+								<div>									
+									<img src="images/sctp.png" style="margin-top: 1rem;"/>
+									<input type="file" id="up" / style="display: none;">															
+								<p class="font">上传照片</p>
+								</div>
+							</label>	
+						<p class="text col-xs-6">*需上传三证合一照片</p>
+						</div>						
+					</div>
+				</div>						
+			</div>					
+			<input class="mui-btn mui-btn-danger tijiao" type="submit" value="提交审核"/>
+		</form>
+	</div>
+</body>
+<script src="js/jquery-1.8.0.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/new_file.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.validate.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/script.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

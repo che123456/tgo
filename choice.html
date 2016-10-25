@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>商家认证</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+    <script type="text/javascript" charset="UTF-8">
+      	mui.init();
+    </script>
+</head>
+<body>
+	<div class="mui-content" id="select">
+	    <div class="mui-row">
+				<div class="mui-col-xs-6">
+					<div class="img_box img_box1">
+						<a href="#">
+							<img src="images/gerenwei.png" />							
+						</a>
+						<span>个人商家</span>
+					</div>				
+				</div>
+				<div class="mui-col-xs-6">
+					<div class="img_box img_box2">
+						<a href="#">
+							<img src="images/qiyewei.png" />
+						</a>
+						<span>企业商家</span>						
+					</div>	
+				</div>
+			</div>
+			<div class="btns">				
+				<a href="register.html" class="mui-btn mui-btn-danger zhuce" >下一步</a>
+			</div>
+			
+	</div>
+</body>
+<script type="text/javascript">
+	var box1=document.getElementsByClassName("img_box1")[0];
+	var box2=document.getElementsByClassName("img_box2")[0];
+	var img1=box1.getElementsByTagName("img")[0];
+	var img2=box2.getElementsByTagName("img")[0];
+	var span1=box1.getElementsByTagName("span")[0];
+	var span2=box2.getElementsByTagName("span")[0];
+	var btn=document.getElementsByClassName("btns")[0];
+	var oA=btn.getElementsByTagName("a")[0];
+	function chu(img,url,span){
+		img.setAttribute('src', url);
+		img.setAttribute("class",'');
+		span.style.color="#5b5b5b";		
+	}
+	function click(obj,img,span,url){
+		obj.onclick=function(){
+  			chu(img1,"images/gerenwei.png",span1)
+  			chu(img2,"images/qiyewei.png",span2)
+  			img.setAttribute('src', url);
+			span.style.color="#fff";
+			img.setAttribute('class', "ac")
+		}
+	}
+	click(box1,img1,span1,"images/gerenxuan.png")
+	click(box2,img2,span2,"images/qiyexuan.png")
+		oA.onclick=function(){
+		if(img1.className=="ac"){
+			oA.setAttribute('href',"Personage.html");
+		}else if(img2.className=="ac"){
+			oA.setAttribute('href',"firm.html");
+		}else{
+			alert("请选择商家类型！！");
+			return false;
+		}
+	}
+	
+</script>
+</html>
